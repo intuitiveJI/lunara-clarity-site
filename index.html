@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thoughtful, AI-assisted intuitive readings for reflection, relationships, and personal growth.">
+  <meta name="theme-color" content="#f6fbff">
+  <title>Lunara Clarity | Intuitive Readings for Reflection</title>
+  <style>
+    :root{--navy:#16324f;--blue:#3f78a8;--sky:#eaf6ff;--ice:#f7fbff;--gold:#b99a54;--ink:#233449;--muted:#61748a;--line:#d8e8f4;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ice);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:var(--blue)}
+    .wrap{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{font-weight:800;letter-spacing:.04em;color:var(--navy);text-decoration:none}
+    .brand span{color:var(--blue)}
+    .navlinks{display:flex;gap:18px;align-items:center}
+    .navlinks a{text-decoration:none;font-size:.92rem;font-weight:650}
+    .hero{padding:76px 0 62px;background:radial-gradient(circle at 85% 20%,#d8efff 0,transparent 28%),linear-gradient(135deg,#fff 0%,#eef8ff 65%,#e4f3ff 100%);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center}
+    .eyebrow{display:inline-block;color:var(--blue);font-weight:800;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase}
+    h1{font-size:clamp(2.35rem,6vw,4.5rem);line-height:1.08;letter-spacing:-.045em;color:var(--navy);margin:14px 0 20px}
+    h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;color:var(--navy);margin:0 0 12px}
+    h3{color:var(--navy);margin:0 0 8px}
+    p{margin:0 0 14px}
+    .lead{font-size:1.12rem;color:#4d6378;max-width:650px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 18px;border-radius:12px;background:var(--blue);color:#fff;text-decoration:none;font-weight:750;border:1px solid var(--blue);min-height:46px}
+    .btn.secondary{background:#fff;color:var(--navy);border-color:#b8d6eb}
+    .orb{aspect-ratio:1;border-radius:50%;max-width:330px;margin:auto;display:grid;place-items:center;background:radial-gradient(circle at 35% 28%,#fff 0 8%,#d8efff 9% 24%,#8ebde0 25% 26%,#eff9ff 27% 52%,#b5d9f1 53% 54%,#e8f6ff 55%);box-shadow:0 25px 60px #8bb8d533;position:relative}
+    .orb:before,.orb:after{content:"✦  ·  ✧";position:absolute;color:var(--gold);font-size:1.5rem;letter-spacing:1.2rem}
+    .orb:before{top:12%;left:9%}.orb:after{bottom:15%;right:3%}
+    .orb-inner{font-size:5rem;color:#fff;text-shadow:0 4px 25px #477ca8aa}
+    section{padding:64px 0}
+    .section-intro{max-width:680px;margin-bottom:28px;color:var(--muted)}
+    .center{text-align:center}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 24px #214f7210;display:flex;flex-direction:column}
+    .tag{font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:800}
+    .price{font-size:1.45rem;font-weight:850;color:var(--navy);margin:10px 0}
+    .price small{font-size:.8rem;font-weight:600;color:var(--muted)}
+    .card ul{padding-left:18px;color:var(--muted);font-size:.94rem;flex:1}
+    .card .btn{margin-top:10px;width:100%}
+    .how{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{padding:20px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+    .num{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:var(--sky);color:var(--blue);font-weight:850;margin-bottom:12px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+    .panel{padding:28px;background:#fff;border:1px solid var(--line);border-radius:20px}
+    .note{background:#f0f8ff;border-left:4px solid var(--blue);padding:14px 16px;border-radius:8px;color:#425d74}
+    .contact{background:linear-gradient(135deg,#eaf6ff,#fff)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:block;font-weight:700;color:var(--navy);font-size:.92rem;margin-bottom:6px}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #c8ddea;border-radius:10px;background:#fff;color:var(--ink);font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    .full{grid-column:1/-1}
+    .small{font-size:.85rem;color:var(--muted)}
+    footer{padding:28px 0;background:#fff;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+    .footrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:850px){.hero-grid,.about-grid{grid-template-columns:1fr}.orb{max-width:230px}.cards{grid-template-columns:repeat(2,1fr)}.how{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:540px){.navlinks{gap:10px}.navlinks a{font-size:.8rem}.navlinks a:nth-child(2){display:none}.hero{padding:52px 0}.cards,.how,.form-grid{grid-template-columns:1fr}.card{padding:20px}.full{grid-column:auto}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">✦ LUNARA <span>CLARITY</span></a>
+      <div class="navlinks">
+        <a href="#readings">Readings</a><a href="#how">How it works</a><a href="#about">About</a>
+        <a class="btn" href="#order">Order a reading</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">A thoughtful moment for you</span>
+        <h1>Make space for <span style="color:var(--blue)">clarity.</span></h1>
+        <p class="lead">Personalized, AI-assisted intuitive readings to help you reflect on relationships, personal growth, and the questions on your mind — prepared with care and reviewed by a human before delivery.</p>
+        <div class="actions">
+          <a class="btn" href="#readings">Explore reading packages</a>
+          <a class="btn secondary" href="#how">How it works</a>
+        </div>
+        <p class="small" style="margin-top:18px">Private written delivery by email · Customers in Nigeria and internationally</p>
+      </div>
+      <div class="orb" aria-hidden="true"><div class="orb-inner">☾</div></div>
+    </div>
+  </section>
+
+  <section id="readings">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Choose your experience</span>
+        <h2>Reading packages</h2>
+        <p class="section-intro" style="margin-left:auto;margin-right:auto">Choose the level of detail that fits your question. Prices below are starter suggestions and can be updated before launch.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">Short & focused</span><h3>Quick Insight</h3>
+          <p>A concise interpretation focused on one question.</p>
+          <div class="price">₦2,000 <small>/ $3</small></div>
+          <ul><li>One question</li><li>Short written response</li><li>Email delivery</li></ul>
+          <a class="btn" href="#order" data-package="Quick Insight">Choose package</a>
+        </article>
+        <article class="card">
+          <span class="tag">Relationships</span><h3>Love & Connection</h3>
+          <p>Reflect on relationship dynamics, feelings, and personal boundaries.</p>
+          <div class="price">₦4,000 <small>/ $7</small></div>
+          <ul><li>One relationship-focused question</li><li>Thoughtful written interpretation</li><li>Email delivery</li></ul>
+          <a class="btn" href="#order" data-package="Love & Connection">Choose package</a>
+        </article>
+        <article class="card">
+          <span class="tag">Personal reflection</span><h3>Personal Path</h3>
+          <p>Explore a personal concern, goal, or decision from a reflective perspective.</p>
+          <div class="price">₦5,000 <small>/ $9</small></div>
+          <ul><li>One main topic</li><li>More detailed response</li><li>Reflection prompts</li></ul>
+          <a class="btn" href="#order" data-package="Personal Path">Choose package</a>
+        </article>
+        <article class="card">
+          <span class="tag">Most detailed</span><h3>Premium Reading</h3>
+          <p>A longer written reading covering up to three questions.</p>
+          <div class="price">₦10,000 <small>/ $18</small></div>
+          <ul><li>Up to three questions</li><li>Detailed response</li><li>Practical reflection prompts</li></ul>
+          <a class="btn" href="#order" data-package="Premium Reading">Choose package</a>
+        </article>
+      </div>
+      <p class="small" style="margin-top:16px">International prices are indicative only. Confirm the final currency, exchange rate, fees, and payment options before accepting an order.</p>
+    </div>
+  </section>
+
+  <section id="how" style="background:#eef7fd">
+    <div class="wrap">
+      <div class="center"><span class="eyebrow">Simple and private</span><h2>How it works</h2></div>
+      <div class="how" style="margin-top:28px">
+        <div class="step"><div class="num">1</div><h3>Choose</h3><p>Select the reading package that best fits your question.</p></div>
+        <div class="step"><div class="num">2</div><h3>Submit</h3><p>Send your question and delivery email through the order form.</p></div>
+        <div class="step"><div class="num">3</div><h3>Confirm payment</h3><p>Your reading begins after payment is confirmed through an agreed payment method.</p></div>
+        <div class="step"><div class="num">4</div><h3>Receive by email</h3><p>Receive your AI-assisted reading, reviewed and edited by a human, within 24–48 hours after confirmation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <span class="eyebrow">Our approach</span>
+        <h2>Intuitive readings, with transparency.</h2>
+        <p>Lunara Clarity offers reflective, AI-assisted written readings designed to help customers explore a question from a fresh perspective. Every reading is reviewed by a human before it is sent.</p>
+        <p>We aim to provide a respectful, private, and non-judgmental experience. Readings are not certain predictions of the future, and we do not claim supernatural abilities or guaranteed outcomes.</p>
+      </div>
+      <div class="panel">
+        <h3>Important note</h3>
+        <p class="note">Readings are for entertainment and personal reflection only. They are not medical, mental-health, legal, or financial advice. Please don't use a reading as the sole basis for major life decisions.</p>
+        <h3 style="margin-top:22px">Privacy</h3>
+        <p class="small">Only share information needed for your reading. Your question and email should be handled privately and not posted publicly. Add a full privacy policy and refund policy before taking paid orders.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="order">
+    <div class="wrap">
+      <span class="eyebrow">Your next step</span>
+      <h2>Request a reading</h2>
+      <p class="section-intro">Fill this in to prepare your request. This starter form opens your email app; it does not process payments or store submissions online.</p>
+      <form id="orderForm" class="panel">
+        <div class="form-grid">
+          <div><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Name or preferred name"></div>
+          <div><label for="email">Email for delivery</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+          <div><label for="country">Country</label><input id="country" name="country" required placeholder="e.g. Nigeria"></div>
+          <div><label for="package">Reading package</label>
+            <select id="package" name="package" required>
+              <option value="">Select a package</option>
+              <option>Quick Insight — ₦2,000 / $3</option>
+              <option>Love & Connection — ₦4,000 / $7</option>
+              <option>Personal Path — ₦5,000 / $9</option>
+              <option>Premium Reading — ₦10,000 / $18</option>
+            </select>
+          </div>
+          <div class="full"><label for="question">Your question(s)</label><textarea id="question" name="question" required placeholder="Share the question or topic you would like to reflect on. Please avoid sharing highly sensitive personal information."></textarea></div>
+          <div class="full"><label><input id="policy" type="checkbox" required style="width:auto;margin-right:8px">I understand that readings are for entertainment and personal reflection, not guaranteed predictions or professional advice.</label></div>
+          <div class="full"><button class="btn" type="submit" style="width:100%;cursor:pointer;font:inherit">Prepare email request</button></div>
+        </div>
+        <p class="small" style="margin-top:14px">Before publishing, replace the placeholder email in this website with your real business email. Add a separate payment link and confirm payment before preparing any reading.</p>
+        <p id="formStatus" class="small" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footrow">
+    <div><strong style="color:var(--navy)">Lunara Clarity</strong><br>Thoughtful readings for personal reflection.</div>
+    <div>© <span id="year"></span> Lunara Clarity · <a href="#about">Disclaimer & privacy note</a></div>
+  </div>
+</footer>
+<script>
+  // SETUP: Replace this with your real customer-service email before publishing.
+  const BUSINESS_EMAIL = "YOUR_EMAIL@example.com";
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelectorAll("[data-package]").forEach(link => {
+    link.addEventListener("click", () => {
+      const choice = link.getAttribute("data-package");
+      const select = document.getElementById("package");
+      const options = Array.from(select.options);
+      const match = options.find(o => o.textContent.startsWith(choice));
+      if (match) select.value = match.value;
+    });
+  });
+  document.getElementById("orderForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (BUSINESS_EMAIL === "YOUR_EMAIL@example.com") {
+      document.getElementById("formStatus").textContent =
+        "Setup needed: the site owner must replace YOUR_EMAIL@example.com in the HTML with a real email address before orders can be sent.";
+      return;
+    }
+    const data = new FormData(this);
+    const subject = encodeURIComponent("Reading request — " + data.get("package"));
+    const body = encodeURIComponent(
+      "Reading request\n\nName: " + data.get("name") +
+      "\nDelivery email: " + data.get("email") +
+      "\nCountry: " + data.get("country") +
+      "\nPackage: " + data.get("package") +
+      "\n\nQuestion(s):\n" + data.get("question") +
+      "\n\nI acknowledge the reading disclaimer."
+    );
+    window.location.href = "mailto:" + BUSINESS_EMAIL + "?subject=" + subject + "&body=" + body;
+    document.getElementById("formStatus").textContent =
+      "Your email app should open with the request. Please send the email to complete your request.";
+  });
+</script>
+</body>
+</html>
